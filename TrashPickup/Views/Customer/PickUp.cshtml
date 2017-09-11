@@ -1,21 +1,26 @@
-﻿
+﻿@model List<TrashPickup.Models.Address>
 @{
-    ViewBag.Title = "PickUp";
-    ViewBag.Message = "Please Enter The Day You Would Like Your Garbage Picked Up"
-}
+    ViewBag.Title = "Pick Ups";
 
  <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
-
-@*<address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
-
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>*@
+ @Html.ActionLink("Add Pick Up", "AddAddress", "Customer")
+    @if(Model.Count > 0)
+    {
+        //open table
+        @foreach(TrashPickup.Models.Address address in Model)
+        {
+            <tr>
+                <td>
+                    @address.AddressLine @address.City, @address.State @address.Zip Pick up: @address.Day
+                    @Html.ActionLink("Remove Address", "RemoveAddress", "Customer", new {AddressId = address.ID}, null)
+                    @Html.ActionLink("Change Pick Up Day", "ChangeDay", "Customer", new { AddressId = address.ID }, null)
+                </td>
+            </tr>
+        }
+        //close table
+    }
+    else
+    {
+        <p> No address found,  please enter an address</p>
+    }
 

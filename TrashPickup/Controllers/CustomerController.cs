@@ -26,9 +26,14 @@ namespace TrashPickup.Controllers
             var user = from x in Data.Users where x.UserName == UserName select x;
             var CurrentUser = user.First();
             var addresses = from x in Data.Address where x.User.Id == CurrentUser.Id select x;
-            var model = addresses.ToList();
+            List<Address> model = addresses.ToList();
 
             return View(model);
+        }
+        public ActionResult AddAddress(int AddressId)
+        {
+
+            return View();
         }
     }
 }
