@@ -208,7 +208,6 @@
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
-    <Compile Include="Models\Billing.cs" />
     <Compile Include="Models\ChooseADate.cs" />
     <Compile Include="Models\CustomerView.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -277,12 +276,15 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\PickUp.cshtml" />
-    <Content Include="Views\Account\Billing.cshtml" />
     <Content Include="Views\Home\MapRoute.cshtml" />
     <Content Include="Views\Home\CustomerZip.cshtml" />
     <Content Include="Views\Shared\_CustomerLayout.cshtml" />
     <Content Include="Views\Shared\_EmployeeLayout.cshtml" />
     <Content Include="Views\Home\Billing.cshtml" />
+    <Content Include="Views\Manage\AddAddress.cshtml" />
+    <Content Include="Views\Manage\AddPickUpDay.cshtml" />
+    <Content Include="Views\Manage\CheckMapRoute.cshtml" />
+    <Content Include="Views\Manage\CheckCustomerZip.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
