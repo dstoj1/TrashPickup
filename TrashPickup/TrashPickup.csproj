@@ -282,6 +282,7 @@
     <Content Include="Views\Home\CustomerZip.cshtml" />
     <Content Include="Views\Shared\_CustomerLayout.cshtml" />
     <Content Include="Views\Shared\_EmployeeLayout.cshtml" />
+    <Content Include="Views\Home\Billing.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
