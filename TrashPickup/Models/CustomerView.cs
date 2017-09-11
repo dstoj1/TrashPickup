@@ -7,5 +7,6 @@ namespace TrashPickup.Models
 {
     public class CustomerView
     {
+
     }
 }
