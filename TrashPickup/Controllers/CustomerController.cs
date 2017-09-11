@@ -30,10 +30,11 @@ namespace TrashPickup.Controllers
 
             return View(model);
         }
+        [HttpGet]
         public ActionResult AddAddress(int AddressId)
         {
-
-            return View();
+            Address Model = new Address();
+            return View(Model);
         }
     }
 }
