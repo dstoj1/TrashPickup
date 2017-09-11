@@ -206,6 +206,10 @@
     <Compile Include="Migrations\201709082030276_Intial.Designer.cs">
       <DependentUpon>201709082030276_Intial.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709112200091_Added Address Table.cs" />
+    <Compile Include="Migrations\201709112200091_Added Address Table.Designer.cs">
+      <DependentUpon>201709112200091_Added Address Table.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -302,6 +306,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201709082030276_Intial.resx">
       <DependentUpon>201709082030276_Intial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709112200091_Added Address Table.resx">
+      <DependentUpon>201709112200091_Added Address Table.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

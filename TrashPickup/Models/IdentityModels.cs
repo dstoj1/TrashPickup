@@ -29,5 +29,6 @@ namespace TrashPickup.Models
         {
             return new ApplicationDbContext();
         }
+        public DbSet<Address> Address { get; set;}
     }
 }

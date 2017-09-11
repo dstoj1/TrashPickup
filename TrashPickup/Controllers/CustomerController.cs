@@ -13,5 +13,9 @@ namespace TrashPickup.Controllers
         {
             return View();
         }
+        public ActionResult PickUp()
+        {
+            return View();
+        }
     }
 }
