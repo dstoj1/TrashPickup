@@ -277,6 +277,11 @@
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
     <Content Include="Views\Home\PickUp.cshtml" />
+    <Content Include="Views\Account\Billing.cshtml" />
+    <Content Include="Views\Home\MapRoute.cshtml" />
+    <Content Include="Views\Home\CustomerZip.cshtml" />
+    <Content Include="Views\Shared\_CustomerLayout.cshtml" />
+    <Content Include="Views\Shared\_EmployeeLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
