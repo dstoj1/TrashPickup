@@ -196,6 +196,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CustomerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -275,13 +276,13 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Home\PickUp.cshtml" />
+    <Content Include="Views\Customer\PickUp.cshtml" />
     <Content Include="Views\Home\MapRoute.cshtml" />
     <Content Include="Views\Home\CustomerZip.cshtml" />
     <Content Include="Views\Shared\_CustomerLayout.cshtml" />
     <Content Include="Views\Shared\_EmployeeLayout.cshtml" />
     <Content Include="Views\Home\Billing.cshtml" />
-    <Content Include="Views\Manage\AddAddress.cshtml" />
+    <Content Include="Views\Customer\AddAddress.cshtml" />
     <Content Include="Views\Manage\AddPickUpDay.cshtml" />
     <Content Include="Views\Manage\CheckMapRoute.cshtml" />
     <Content Include="Views\Manage\CheckCustomerZip.cshtml" />
