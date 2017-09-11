@@ -13,5 +13,6 @@ namespace TrashPickup.Models
         public string State { get; set; }
         public int Zip { get; set;}
         public string Day { get; set; }
+        public ApplicationUser User { get; set;}
     }
 }
