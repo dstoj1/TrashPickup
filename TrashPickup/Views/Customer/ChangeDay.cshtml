@@ -1,0 +1,34 @@
+﻿
+ @model List<TrashPickup.Models.Address>
+@{
+    ViewBag.Title = "Change Pick Up Day";
+}
+<h2>@ViewBag.Title.</h2>
+@Html.ActionLink("", "AddAddress", "Customer")
+@if (Model.Count > 0)
+{
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Pick Up</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (TrashPickup.Models.Address address in Model)
+                {
+                <tr>
+                    <td>
+                        @address.AddressLine  @address.City,  @address.State  @address.Zip <br /><b>Pick up: @address.Day</b><br />
+                        @Html.ActionLink("Remove Address", "RemoveAddress", "Customer", new { AddressId = address.ID }, null)<br />
+                        @Html.ActionLink("Change Pick Up Day", "ChangeDay", "Customer", new { AddressId = address.ID }, null)
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p> No address found,  please enter an address</p>
+}
+
