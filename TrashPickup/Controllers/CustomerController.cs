@@ -47,12 +47,17 @@ namespace TrashPickup.Controllers
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
         }
-        [HttpDelete]
-        public ActionResult Remove(int id)
+        public ActionResult RemoveAddress(int id)
         {
             var Address = from x in Data.Address where x.ID == id select x;
             Data.Address.Remove(Address.First());
             Data.SaveChanges();
+            return RedirectToAction("PickUp", "Customer");
+        }
+        public ActionResult EditDay(Address address)
+        {
+            var addressInDB = from x in Data.Address where x.ID == id select x;
+            addressInDB.Day = address.Day;
             return RedirectToAction("PickUp", "Customer");
         }
     }

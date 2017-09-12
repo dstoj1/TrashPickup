@@ -294,7 +294,6 @@
     <Content Include="Views\Manage\AddPickUpDay.cshtml" />
     <Content Include="Views\Manage\CheckMapRoute.cshtml" />
     <Content Include="Views\Manage\CheckCustomerZip.cshtml" />
-    <Content Include="Views\Account\Address.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -9,9 +9,9 @@ namespace TrashPickup.Models
     public class Address
     {
         public int ID { get; set;}
-        //[Display (Name = "ID")]
+        [Display (Name = "ID")]
         public string AddressLine { get; set; }
-        //[Display(Name = "Address")]
+        [Display(Name = "Address")]
         public string City { get; set; }
         [Display(Name = "City")]
         public string State { get; set; }
