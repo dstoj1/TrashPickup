@@ -31,10 +31,29 @@ namespace TrashPickup.Controllers
             return View(model);
         }
         [HttpGet]
-        public ActionResult AddAddress(int AddressId)
+        public ActionResult AddAddress()
         {
             Address Model = new Address();
             return View(Model);
+        }
+        [HttpPost]
+        public ActionResult AddAddress(Address address)
+        {
+            string UserName = User.Identity.GetUserName();
+            var user = from x in Data.Users where x.UserName == UserName select x;
+            var CurrentUser = user.First();
+            address.User = CurrentUser;
+            Data.Address.Add(address);
+            Data.SaveChanges();
+            return RedirectToAction("PickUp", "Customer");
+        }
+        [HttpDelete]
+        public ActionResult Remove(int id)
+        {
+            var Address = from x in Data.Address where x.ID == id select x;
+            Data.Address.Remove(Address.First());
+            Data.SaveChanges();
+            return RedirectToAction("PickUp", "Customer");
         }
     }
 }
