@@ -52,12 +52,19 @@ namespace TrashPickup.Controllers
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
         }
-        public ActionResult EditDay(Address address)
+        [HttpPost]
+        public ActionResult ChangeDay(Address address)
         {
             var addressInDB = (from x in Data.Address where x.ID == address.ID select x).First();
             addressInDB.Day = address.Day;
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
+        }
+        [HttpGet]
+        public ActionResult ChangeDay(int AddressId)
+        {
+            var addressInDB = (from x in Data.Address where x.ID == AddressId select x).First();
+            return View(addressInDB);
         }
     }
 } 

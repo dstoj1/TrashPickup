@@ -8,7 +8,7 @@ namespace TrashPickup.Models
     public class ChooseADate
     {
         [Display(Name = "Choose Another Day for Pick Up")]
-        public int AnotherDayForPickUp { get; set; }
+        public string AnotherDay { get; set; }
         [Display(Name = "Please Put Pick Up On Hold")]
         public string PickUpOnHold { get; set; }
         public ApplicationUser User { get; set; }
