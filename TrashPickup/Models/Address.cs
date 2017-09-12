@@ -8,18 +8,18 @@ namespace TrashPickup.Models
 {
     public class Address
     {
-        public int ID { get; set;}
         [Display (Name = "ID")]
-        public string AddressLine { get; set; }
+        public int ID { get; set;}
         [Display(Name = "Address")]
-        public string City { get; set; }
+        public string AddressLine { get; set; }
         [Display(Name = "City")]
-        public string State { get; set; }
+        public string City { get; set; }
         [Display(Name = "State")]
-        public int Zip { get; set;}
+        public string State { get; set; }
         [Display(Name = "Zip")]
+        public int Zip { get; set;}
+        [Display(Name = "Choose A Pick Up Day")]
         public string Day { get; set; }
-        [Display(Name = "Day")]
         public ApplicationUser User { get; set;}
     }
 }

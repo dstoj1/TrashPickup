@@ -30,11 +30,9 @@ namespace TrashPickup.Controllers
 
             return View(model);
         }
-        [HttpGet]
         public ActionResult AddAddress()
         {
-            Address Model = new Address();
-            return View(Model);
+            return View();
         }
         [HttpPost]
         public ActionResult AddAddress(Address address)
@@ -47,18 +45,19 @@ namespace TrashPickup.Controllers
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
         }
-        public ActionResult RemoveAddress(int id)
+        public ActionResult RemoveAddress(int AddressId)
         {
-            var Address = from x in Data.Address where x.ID == id select x;
+            var Address = from x in Data.Address where x.ID == AddressId select x;
             Data.Address.Remove(Address.First());
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
         }
         public ActionResult EditDay(Address address)
         {
-            var addressInDB = from x in Data.Address where x.ID == id select x;
+            var addressInDB = (from x in Data.Address where x.ID == address.ID select x).First();
             addressInDB.Day = address.Day;
+            Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
         }
     }
-}
+} 

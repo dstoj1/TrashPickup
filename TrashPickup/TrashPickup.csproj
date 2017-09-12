@@ -218,7 +218,6 @@
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
     <Compile Include="Models\ChooseADate.cs" />
-    <Compile Include="Models\CustomerView.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -291,7 +290,6 @@
     <Content Include="Views\Shared\_EmployeeLayout.cshtml" />
     <Content Include="Views\Customer\Billing.cshtml" />
     <Content Include="Views\Customer\AddAddress.cshtml" />
-    <Content Include="Views\Manage\AddPickUpDay.cshtml" />
     <Content Include="Views\Manage\CheckMapRoute.cshtml" />
     <Content Include="Views\Manage\CheckCustomerZip.cshtml" />
   </ItemGroup>
