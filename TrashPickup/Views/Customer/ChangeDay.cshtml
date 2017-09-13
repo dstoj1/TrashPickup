@@ -1,34 +1,37 @@
-﻿
- @model TrashPickup.Models.Address
+﻿ @model TrashPickup.Models.Address
+
 @{
-    ViewBag.Title = "Change Pick Up Day";
+    ViewBag.Title = "UpDate Days For Trash Pick Up";
 }
-<h2>@ViewBag.Title.</h2>
-@Html.ActionLink("", "AddAddress", "Customer")
-@if (Model.Count > 0)
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm())
 {
-    <table class="table table-bordered table-hover">
-        <thead>
-            <tr>
-                <th>Pick Up</th>
-            </tr>
-        </thead>
-        <tbody>
-            @foreach (TrashPickup.Models.Address address in Model)
-                {
-                <tr>
-                    <td>
-                        @address.AddressLine  @address.City,  @address.State  @address.Zip <br /><b>Pick up: @address.Day</b><br />
-                        @Html.ActionLink("Remove Address", "RemoveAddress", "Customer", new { AddressId = address.ID }, null)<br />
-                        @Html.ActionLink("Change Pick Up Day", "ChangeDay", "Customer", new { AddressId = address.ID }, null)
-                    </td>
-                </tr>
-            }
-        </tbody>
-    </table>
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>UpDate Days For Trash Pick Up</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group">
+            @Html.LabelFor(model => model.Day, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Day, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Day, "", new { @class = "text-danger" })
+            </div>
+        </div>       
+        @Html.HiddenFor(model => model.ID)
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </div>
+    </div>
 }
-else
-{
-    <p> No address found,  please enter an address</p>
-}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
 
