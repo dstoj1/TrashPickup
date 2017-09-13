@@ -197,6 +197,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\CustomerController.cs" />
+    <Compile Include="Controllers\EmployeeController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
@@ -217,6 +218,14 @@
     <Compile Include="Migrations\201709131357106_Removed UpDateDay and edited Address Models.cs" />
     <Compile Include="Migrations\201709131357106_Removed UpDateDay and edited Address Models.Designer.cs">
       <DependentUpon>201709131357106_Removed UpDateDay and edited Address Models.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709132046116_Added Billing Table.cs" />
+    <Compile Include="Migrations\201709132046116_Added Billing Table.Designer.cs">
+      <DependentUpon>201709132046116_Added Billing Table.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201709132128309_Added Zipcode to IdentityModel.cs" />
+    <Compile Include="Migrations\201709132128309_Added Zipcode to IdentityModel.Designer.cs">
+      <DependentUpon>201709132128309_Added Zipcode to IdentityModel.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -295,6 +304,7 @@
     <Content Include="Views\Manage\CheckMapRoute.cshtml" />
     <Content Include="Views\Manage\CheckCustomerZip.cshtml" />
     <Content Include="Views\Customer\ChangeDay.cshtml" />
+    <Content Include="Views\Employee\ChangeZip.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -319,6 +329,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709131357106_Removed UpDateDay and edited Address Models.resx">
       <DependentUpon>201709131357106_Removed UpDateDay and edited Address Models.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709132046116_Added Billing Table.resx">
+      <DependentUpon>201709132046116_Added Billing Table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709132128309_Added Zipcode to IdentityModel.resx">
+      <DependentUpon>201709132128309_Added Zipcode to IdentityModel.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

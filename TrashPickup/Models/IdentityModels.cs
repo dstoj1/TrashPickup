@@ -16,6 +16,7 @@ namespace TrashPickup.Models
             // Add custom user claims here
             return userIdentity;
         }
+        public int ZipCode {get; set; }
     }
 
     public class ApplicationDbContext : IdentityDbContext<ApplicationUser>

@@ -65,6 +65,6 @@ namespace TrashPickup.Controllers
             addressInDB.Day = address.Day;
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
-        }
+        }       
     }
 } 
