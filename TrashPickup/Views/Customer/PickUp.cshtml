@@ -17,7 +17,7 @@
                 {
                     <tr>
                         <td>
-                            @address.AddressLine  @address.City,  @address.State  @address.Zip <br/><b>Pick up: @address.Day</b><br/>
+                            @address.AddressLine  @address.City,  @address.State  @address.Zip <br/><b>Pick Up: @address.Day</b><br/><b>Pick Up On Hold: @address.HoldStart</b><br />
                             @Html.ActionLink("Remove Address", "RemoveAddress", "Customer", new { AddressId = address.ID }, null)<br/>
                             @Html.ActionLink("Change Pick Up Day", "ChangeDay", "Customer", new { AddressId = address.ID }, null)
                         </td>

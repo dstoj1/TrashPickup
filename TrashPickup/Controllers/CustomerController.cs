@@ -52,6 +52,12 @@ namespace TrashPickup.Controllers
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
         }
+        [HttpGet]
+        public ActionResult ChangeDay(int AddressId)
+        {
+            var addressInDB = (from x in Data.Address where x.ID == AddressId select x).First();
+            return View(addressInDB);
+        }
         [HttpPost]
         public ActionResult ChangeDay(Address address)
         {
@@ -59,12 +65,6 @@ namespace TrashPickup.Controllers
             addressInDB.Day = address.Day;
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
-        }
-        [HttpGet]
-        public ActionResult ChangeDay(int AddressId)
-        {
-            var addressInDB = (from x in Data.Address where x.ID == AddressId select x).First();
-            return View(addressInDB);
         }
     }
 } 
