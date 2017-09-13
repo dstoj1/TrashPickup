@@ -10,9 +10,8 @@ namespace TrashPickup.Models
     {
         [Display(Name = "ID")]
         public int ID { get; set; }
-        [Display(Name = "User Id")]
-        public int UserID { get; set; }
         [Display(Name = "Balance For Monthly Pick Up")]
         public double Balance { get; set; }
+        public ApplicationUser User { get; set; }
     }
 }
