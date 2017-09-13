@@ -36,7 +36,7 @@ namespace TrashPickup.Controllers
             var CurrentUser = user.First();
             CurrentUser.ZipCode = Employee.ZipCode;
             Data.SaveChanges();
-            return RedirectToAction("Home", "Index");
+            return RedirectToAction("Index", "Home");
         }
              
         public ActionResult AddCharge()
