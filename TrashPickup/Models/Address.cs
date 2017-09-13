@@ -20,6 +20,8 @@ namespace TrashPickup.Models
         public int Zip { get; set;}
         [Display(Name = "Choose A Pick Up Day")]
         public string Day { get; set; }
+        [Display(Name = "Put On Hold Or Start")]
+        public string HoldStart { get; set; }
         public ApplicationUser User { get; set;}
     }
 }
