@@ -73,8 +73,14 @@ namespace TrashPickup.Controllers
             string UserName = User.Identity.GetUserName();
             var user = from x in Data.Users where x.UserName == UserName select x;
             var CurrentUser = user.First();
-            try { account = (from x in Data.Billing where x.User.Id == CurrentUser.Id select x).First(); }
-            catch { account = new Billing(); }
+            try
+            {
+                account = (from x in Data.Billing where x.User.Id == CurrentUser.Id select x).First();
+            }
+            catch
+            {
+                account = new Billing();
+            }
             return View(account);
         }
             
