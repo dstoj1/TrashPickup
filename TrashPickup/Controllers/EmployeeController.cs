@@ -43,7 +43,8 @@ namespace TrashPickup.Controllers
             string UserName = User.Identity.GetUserName();
             var user = from x in Data.Users where x.UserName == UserName select x;
             var CurrentUser = user.First();
-            List<Address> Addresses = (from x in Data.Address where x.Zip == CurrentUser.ZipCode && x.Day.ToLower() == DateTime.Now.DayOfWeek.ToString().ToLower() && !x.HoldStart select x).ToList();
+            var today = DateTime.Now.DayOfWeek.ToString().ToLower();
+            List<Address> Addresses = (from x in Data.Address where x.Zip == CurrentUser.ZipCode && x.Day.ToLower() == today && !x.HoldStart select x).ToList();
             return View(Addresses);
         }            
         public ActionResult AddCharge(int id)
