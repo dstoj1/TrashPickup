@@ -21,7 +21,7 @@ namespace TrashPickup.Models
         [Display(Name = "Choose A Pick Up Day")]
         public string Day { get; set; }
         [Display(Name = "Put On Hold Or Start")]
-        public string HoldStart { get; set; }
+        public bool HoldStart { get; set; }
         public ApplicationUser User { get; set;}
     }
 }

@@ -63,6 +63,7 @@ namespace TrashPickup.Controllers
         {
             var addressInDB = (from x in Data.Address where x.ID == address.ID select x).First();
             addressInDB.Day = address.Day;
+            addressInDB.HoldStart = address.HoldStart;
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
         }       
