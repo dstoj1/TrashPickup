@@ -227,6 +227,10 @@
     <Compile Include="Migrations\201709132128309_Added Zipcode to IdentityModel.Designer.cs">
       <DependentUpon>201709132128309_Added Zipcode to IdentityModel.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201709141425411_Changed HoldStart.cs" />
+    <Compile Include="Migrations\201709141425411_Changed HoldStart.Designer.cs">
+      <DependentUpon>201709141425411_Changed HoldStart.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Address.cs" />
@@ -311,6 +315,7 @@
   <ItemGroup>
     <Folder Include="App_Data\" />
     <Folder Include="Migrations\201709141344399_Changed Hold\" />
+    <Folder Include="Migrations\201709141346597_Change Hold\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />
@@ -338,6 +343,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201709132128309_Added Zipcode to IdentityModel.resx">
       <DependentUpon>201709132128309_Added Zipcode to IdentityModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201709141425411_Changed HoldStart.resx">
+      <DependentUpon>201709141425411_Changed HoldStart.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

@@ -20,7 +20,7 @@ namespace TrashPickup.Models
         public int Zip { get; set;}
         [Display(Name = "Choose A Pick Up Day")]
         public string Day { get; set; }
-        [Display(Name = "Put On Hold Or Start")]
+        [Display(Name = "Put Pick Up On Hold")]
         public bool HoldStart { get; set; }
         public ApplicationUser User { get; set;}
     }
