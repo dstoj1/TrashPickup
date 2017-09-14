@@ -1,4 +1,5 @@
 ﻿@model TrashPickup.Models.ApplicationUser
+ 
 <!DOCTYPE html>
 
 <html>
@@ -12,16 +13,17 @@
         @Html.AntiForgeryToken()
 
         <div class="form-horizontal">
-            <h4>Update Zip</h4>
+            <h4>Update ZipCode</h4>
             <hr />
             @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-            <div class="form-group">                
+            <div class="form-group">               
                 <div class="col-md-10">
                     @Html.LabelFor(model => model.ZipCode, htmlAttributes: new { @class = "control-label col-md-2" })
                     @Html.EditorFor(model => model.ZipCode, new { htmlAttributes = new { @class = "form-control" } })
                     @Html.ValidationMessageFor(model => model.ZipCode , "", new { @class = "text-danger" })
                 </div>
-            </div>            
+            </div>
+              
             @Html.HiddenFor(model => model.Id)
             <div class="form-group">
                 <div class="col-md-offset-2 col-md-10">

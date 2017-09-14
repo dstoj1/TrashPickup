@@ -1,0 +1,24 @@
+﻿@model List<TrashPickup.Models.Address>
+@{
+    ViewBag.Title = "ShowAddress";
+}
+
+<h2>ShowAddress</h2>
+
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Pick Up</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var Address in Model)
+        {
+            <tr>
+                <td>@Address.AddressLine</td>
+                <td>@Address.City</td>
+                <td>@Html.ActionLink("Pick Up", "AddCharge", "Employee", new { id = Address.ID }, null)</td>
+            </tr>
+        }
+    </tbody>
+    </table>

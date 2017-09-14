@@ -305,6 +305,7 @@
     <Content Include="Views\Manage\CheckCustomerZip.cshtml" />
     <Content Include="Views\Customer\ChangeDay.cshtml" />
     <Content Include="Views\Employee\ChangeZip.cshtml" />
+    <Content Include="Views\Employee\ShowAddress.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -38,22 +38,32 @@ namespace TrashPickup.Controllers
             Data.SaveChanges();
             return RedirectToAction("Index", "Home");
         }
-             
-        public ActionResult AddCharge()
+        public ActionResult ShowAddress()
         {
-            return View();
+            string UserName = User.Identity.GetUserName();
+            var user = from x in Data.Users where x.UserName == UserName select x;
+            var CurrentUser = user.First();
+            List<Address> Addresses = (from x in Data.Address where x.Zip == CurrentUser.ZipCode select x).ToList();
+            return View(Addresses);
+        }            
+        public ActionResult AddCharge(int id)
+
+       {
+            Billing account;
+            var address = (from x in Data.Address.Include("User") where x.ID == id select x).First();
+            try { account = (from x in Data.Billing where x.User.Id == address.User.Id select x).First(); }
+            catch
+            {
+                var user = (from x in Data.Users where x.Id == address.User.Id select x).First();
+                Billing Account = new Billing();
+                Account.User = user;
+                Data.Billing.Add(Account);
+                Data.SaveChanges();
+                account = (from x in Data.Billing where x.User.Id == address.User.Id select x).First();
+            }
+            account.Balance += 35.00;
+            Data.SaveChanges();
+            return RedirectToAction("ShowAddress", "Employee");
         }
-        //[HttpPost]
-        ////public ActionResult AddCharge(string UserID)
-        ////{
-        ////    var account = (from x in Data.Billing where x.User.Id == UserID select x).First();
-        ////    account.Balance += 35.00;
-        ////    Data.SaveChanges();
-        ////    //return RedirectToAction("Billing", "Customer");
-        ////}
-        ////public ActionResult PickTrash()
-        ////{
-        ////    var
-        //}
     }
 }
