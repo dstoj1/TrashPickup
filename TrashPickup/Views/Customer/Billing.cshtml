@@ -1,25 +1,27 @@
-﻿
- @using (Html.BeginForm())
- {
-    @Html.AntiForgeryToken()
+﻿@model TrashPickup.Models.Billing
 
-    <div class="form-horizontal">
-        <h4>Balance</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.ID, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.ID, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.ID, "", new { @class = "text-danger" })
-            </div>
-        </div>
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Add Address" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
+ @if (Model != null)
+ {
+    <table class="table table-bordered table-hover">
+        <thead>
+            <tr>
+                <th>Account</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+                
+                <tr>
+                    <td>
+                        $@Model.Balance
+                        
+                    </td>
+                </tr>
+            
+        </tbody>
+    </table>
  }
-</body>
-</html>
+ else
+ {
+    <p> No address found,  please enter an address</p>
+ }

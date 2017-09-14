@@ -66,5 +66,14 @@ namespace TrashPickup.Controllers
             Data.SaveChanges();
             return RedirectToAction("PickUp", "Customer");
         }       
+        public ActionResult Billing()
+        {
+            string UserName = User.Identity.GetUserName();
+            var user = from x in Data.Users where x.UserName == UserName select x;
+            var CurrentUser = user.First();            
+            Billing account = (from x in Data.Billing where x.User.Id == CurrentUser.Id select x).First();
+            return View(account);
+        }
+            
     }
 } 
